@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 3000
 async function start () {
   dotEnv.config();
   const server = express()
-  server.use(routes)
   server.use(express.json())
+  server.use(routes)
 
   await connection.connect()
   

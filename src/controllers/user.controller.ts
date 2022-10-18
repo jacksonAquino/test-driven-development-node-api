@@ -3,8 +3,8 @@ import { UserCreateOperation } from "@operations/user/create";
 
 export class UserController {
   async create(req: Request, res: Response){
-    const params = req.body
-    const result = await new UserCreateOperation().execute(params)
+    const { body } = req
+    const result = await new UserCreateOperation().execute(body)
     res.send(result)
   }
 }
