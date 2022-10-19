@@ -1,6 +1,6 @@
 import { ICompanyRepository, CompanyRepository } from "@repositories/company.repository";
 
-export class CompanyCountOperation {
+export class CountOperation {
   constructor(
     private companyRepository: ICompanyRepository = new CompanyRepository()
   ){}
